@@ -11,3 +11,21 @@ class SquareHeader extends StatelessWidget {
     );
   }
 }
+
+class BorderRadiusHeader extends StatelessWidget {
+  const BorderRadiusHeader({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 300,
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(50),
+          bottomRight: Radius.circular(30),
+        ),
+        color: Color(0xff615AAB),
+      ),
+    );
+  }
+}
