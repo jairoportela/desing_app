@@ -1,4 +1,5 @@
-import 'package:desings_app/src/pages/headers_page.dart';
+import 'package:desings_app/src/pages/animations_page.dart';
+// import 'package:desings_app/src/pages/headers_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +15,6 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Diseños APP',
-        home: HeadersPage());
+        home: AnimationsPage());
   }
 }

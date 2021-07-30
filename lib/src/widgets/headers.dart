@@ -216,10 +216,9 @@ class WaveHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       height: double.infinity,
       width: double.infinity,
-      // color: const ,
       child: CustomPaint(
         painter: _HeaderWavePainter(),
       ),
@@ -228,10 +227,11 @@ class WaveHeader extends StatelessWidget {
 }
 
 class _HeaderWavePainter extends CustomPainter {
+  const _HeaderWavePainter();
   @override
   void paint(Canvas canvas, Size size) {
-    // const altura = 0.30;
-    // const resta = 0.06;
+    const altura = 0.30;
+    const resta = 0.06;
     //Lapiz
     final paint = Paint();
 
@@ -243,36 +243,37 @@ class _HeaderWavePainter extends CustomPainter {
     final path = Path();
 
     //Dibujar con el path  y el paint
-    // path.lineTo(0, size.height * altura);
+    path.lineTo(0, size.height * altura);
 
-    // path.quadraticBezierTo(
-    //   size.width * altura,
-    //   size.height * (altura + resta),
-    //   size.width * 0.5,
-    //   size.height * altura,
-    // );
-    // path.quadraticBezierTo(
-    //   size.width * 0.75,
-    //   size.height * (altura - resta),
-    //   size.width,
-    //   size.height * altura,
-    // );
-    // path.lineTo(size.width, 0);
-    path.moveTo(0, size.height);
-    path.lineTo(0, size.height * 0.75);
     path.quadraticBezierTo(
-      size.width * 0.25,
-      size.height * 0.70,
+      size.width * altura,
+      size.height * (altura + resta),
       size.width * 0.5,
-      size.height * 0.75,
+      size.height * altura,
     );
     path.quadraticBezierTo(
       size.width * 0.75,
-      size.height * 0.80,
+      size.height * (altura - resta),
       size.width,
-      size.height * 0.75,
+      size.height * altura,
     );
-    path.lineTo(size.width, size.height);
+    path.lineTo(size.width, 0);
+
+    // path.moveTo(0, size.height);
+    // path.lineTo(0, size.height * 0.75);
+    // path.quadraticBezierTo(
+    //   size.width * 0.25,
+    //   size.height * 0.70,
+    //   size.width * 0.5,
+    //   size.height * 0.75,
+    // );
+    // path.quadraticBezierTo(
+    //   size.width * 0.75,
+    //   size.height * 0.80,
+    //   size.width,
+    //   size.height * 0.75,
+    // );
+    // path.lineTo(size.width, size.height);
 
     canvas.drawPath(path, paint);
   }
@@ -294,6 +295,14 @@ class WaveGradientHeader extends StatelessWidget {
       // color: const ,
       child: CustomPaint(
         painter: _HeaderWaveGradientPainter(),
+        // child: Container(
+        //   padding: EdgeInsets.all(50),
+        //   child: Text(
+        //     "lorem ipsilum ajsdjajskdjsf akdjakdj jairo jasjd",
+        //     style: TextStyle(color: Colors.red, fontSize: 30),
+        //     textAlign: TextAlign.center,
+        //   ),
+        // ),
       ),
     );
   }
