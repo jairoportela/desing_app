@@ -32,7 +32,7 @@ class _AnimatedSquareState extends State<AnimatedSquare>
       duration: const Duration(milliseconds: 4000),
     );
 
-    rotation = Tween(begin: 0.0, end: 2.0)
+    rotation = Tween(begin: 0.0, end: 3.1416)
         .animate(CurvedAnimation(parent: _controller, curve: Curves.bounceOut));
 
     super.initState();
