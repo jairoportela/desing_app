@@ -3,7 +3,7 @@
 // import 'package:desings_app/src/pages/animations_page.dart';
 // import 'package:desings_app/src/challenges/square_animated_page.dart';
 
-import 'package:desings_app/src/challenges/header_animated_page.dart';
+import 'package:desings_app/src/pages/graphics_progress_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,6 +19,6 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Diseños APP',
-        home: HeaderAnimatedPage());
+        home: GraphicsProgressPage());
   }
 }
